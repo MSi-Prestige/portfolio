@@ -1,0 +1,27 @@
+.sidepanel {
+  //TODO: при использовании posit: absolute - мы его перемещаем top: left: .....
+  position: fixed;
+  top: 230px;
+  left: 50px;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+  color: #fff;
+  &__divider {
+    width: 2px;
+    height: 70px;
+    background-color: #fff;
+  }
+  &__text {
+    height: 150px;
+    width: 25px;
+    span {
+      transform: rotate(-90deg) translate(-30%, -260%);
+      display: block;
+      width: 150px;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.promo {
+  min-height: 100vh;
+  position: relative; //! для размешения эллементов в пространстве блока
+  background: url("../img/natureBg1.jpg") no-repeat 50% / cover; //тут путь пишем из DIST , вышли из ..css > ..img/pic
+  padding-top: 205px;
+  &__title {
+    width: 530px;
+    margin-top: 10px;
+  }
+  &__subtitle {
+    position: relative;
+    padding-left: 10px;
+    z-index: 2;
+    @include before_circle;
+  }
+  &__btns {
+    margin-top: 25px;
+    display: flex; //родитель
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+  }
+  &__link {
+    color: rgb(58, 57, 57);
+    font-weight: bold;
+    &:hover {
+      color: rgb(131, 131, 156);
+      text-decoration: none;
+    }
+  }
+}
