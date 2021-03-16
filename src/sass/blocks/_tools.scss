@@ -33,6 +33,18 @@
 
 // PERCENT BLOCK ------------------------------
 
+@keyframes change-background {
+  0% {
+    background: #69b7eb;
+  }
+  50% {
+    background: #b3dbd3;
+  }
+  100% {
+    background: $main-color;
+  }
+}
+
 .calc {
   &__grid {
     display: grid;
@@ -45,7 +57,7 @@
     display: grid;
     grid-template-columns: 300px 50px;
     grid-template-rows: 35px;
-    align-items: end;
+    align-content: space-between;
   }
   &__title {
     padding-left: 13px;
@@ -59,5 +71,14 @@
     width: 310px;
     height: 14px;
     background-color: gray;
+    // TODO : SPAN =============== DISPLAY: BLOCK !
+
+    span {
+      height: 14px;
+      display: block;
+      height: 100%;
+      background-color: $main-color;
+      animation: change-background 4s linear infinite;
+    }
   }
 }
