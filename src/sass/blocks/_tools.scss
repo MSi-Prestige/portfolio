@@ -1,0 +1,63 @@
+.tools {
+  margin-top: 120px;
+  &__grid {
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
+    grid-template-rows: repeat(2, 270px);
+    grid-auto-rows: 270px;
+    column-gap: 13px;
+    row-gap: 13px;
+  }
+  &__element {
+    border: 1px solid black;
+    &-text {
+      padding: 15px 29px 25px 30px;
+      font-size: 12px;
+      line-height: 18px;
+    }
+    &-svg {
+      min-height: 95px;
+      padding: 30px 0 0 30px;
+    }
+    &-descr {
+      padding: 20px 0 0 30px;
+    }
+  }
+  &__calc {
+    width: 1140px;
+    padding-top: 120px;
+    margin: 0 auto;
+  }
+}
+
+// PERCENT BLOCK ------------------------------
+
+.calc {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(2, 70px);
+    column-gap: 45px;
+    row-gap: 30px;
+  }
+  &__item-grid {
+    display: grid;
+    grid-template-columns: 300px 50px;
+    grid-template-rows: 35px;
+    align-items: end;
+  }
+  &__title {
+    padding-left: 13px;
+    position: relative;
+    @include before_circle;
+  }
+  &__percent {
+    padding-left: 10px;
+  }
+  &__line_undr {
+    width: 310px;
+    height: 14px;
+    background-color: gray;
+  }
+}
