@@ -55,6 +55,42 @@
     column-gap: 40px;
     row-gap: 30px;
   }
+  .portfolio {
+    &__works {
+      grid-template-columns: repeat(auto-fit, 280px);
+      grid-auto-rows: 280px;
+      justify-content: space-between;
+      row-gap: 30px;
+      .horizontal,
+      .vertical {
+        grid-row: unset;
+        grid-column: unset;
+      }
+    }
+  }
+  .price {
+    width: 960px;
+    padding: 60px 15px 0 15px;
+    margin: 0 auto;
+  }
+
+  .contacts {
+    &__form {
+      margin-top: 30px;
+      display: grid;
+      grid-template: 45px 155px 45px / repeat(2, 250px);
+      justify-content: space-evenly;
+      row-gap: 15px;
+    }
+    &__photo {
+      img {
+        width: 90%;
+      }
+    }
+    &__grid {
+      padding: 0;
+    }
+  }
 }
 // ---------------------------------------------------------------------------------------------
 @media (max-width: 992px) {
@@ -101,6 +137,53 @@
   }
   .calc__grid {
     column-gap: 20px;
+  }
+  .price {
+    width: 720px;
+    &__grid {
+      grid-template-columns: repeat(auto-fit, 300px);
+      justify-content: space-around;
+    }
+  }
+
+  .contacts {
+    &__triggers {
+      display: block;
+      padding-top: 15px;
+    }
+    &__input {
+      padding: 20px 0 10px 0;
+      height: 60px;
+    }
+    &__policy {
+      padding-top: 10px;
+    }
+    &__descr {
+      width: 300px;
+    }
+    padding: 80px 0 50px 0;
+    &__form {
+      margin-top: 20px;
+      display: block;
+      label {
+        top: 12px;
+      }
+    }
+    &__photo {
+      width: 300px;
+      img {
+        width: 100%;
+      }
+    }
+    &__grid {
+      grid-template-columns: repeat(2, 360px);
+    }
+  }
+  .contacts__textarea {
+    margin-top: 20px;
+    label {
+      margin-top: -20px;
+    }
   }
 }
 // --------------------------------------------------------------------------------------
@@ -160,6 +243,37 @@
     justify-content: center;
     row-gap: 30px;
   }
+  .portfolio__works {
+    grid-template-columns: repeat(auto-fit, 260px);
+    grid-auto-rows: 260px;
+    justify-content: space-between;
+  }
+  .price {
+    width: 540px;
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .grid__elem {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .contacts {
+    &__grid {
+      grid-template-columns: 360px;
+      grid-template-rows: 300px 400px;
+      justify-content: center;
+    }
+    &__photo {
+      width: 100%;
+      padding-bottom: 20px;
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
 }
 // ----------------------------------------------------------------------------------
 @media (max-width: 576px) {
@@ -189,7 +303,7 @@
     }
   }
   .promo {
-    background: url("../img/main_bg.jpg") no-repeat 59% / cover;
+    background: url("../img/bg4.jpg") no-repeat 59% / cover;
     &__btns {
       margin-top: 30px;
     }
@@ -230,5 +344,39 @@
     grid-template-columns: 250px 30px;
     grid-template-rows: 35px;
     align-content: space-between;
+  }
+  .portfolio__works {
+    grid-template-columns: repeat(auto-fit, 280px);
+    grid-auto-rows: 280px;
+    justify-content: center;
+  }
+  .portfolio {
+    padding-top: 70px;
+  }
+  .resume {
+    padding-top: 70px;
+  }
+  .price {
+    width: 320px;
+    &__grid {
+      grid-template-columns: 280px;
+    }
+  }
+  .title_fz14 {
+    font-size: 13px;
+  }
+  .contacts {
+    padding-top: 50px;
+    &__photo {
+      img {
+        object-fit: cover;
+      }
+    }
+    &__grid {
+      grid-template-columns: 300px;
+    }
+    &__triggers {
+      padding-bottom: 20px;
+    }
   }
 }

@@ -26,3 +26,11 @@
     font-size: 48px;
   }
 }
+.promo {
+  &__title {
+    color: rgb(101, 255, 170);
+  }
+  &__subtitle {
+    color: rgb(0, 255, 115);
+  }
+}
