@@ -42,6 +42,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -485,25 +486,26 @@
                         Или оставьте ваши данные и я сама вам напишу:
                     </div>
                     <!-- FORM -->
-                    <form action="#" class="contacts__form">
+                    <form id="contactForm" action="#" class="contacts__form">
                         <div class="contacts__input">
-                            <input required name="name" id="name" type="text">
-                            <label for="name">Ваше имя</label>
+                            <input name="name" id="name" type="text">
+                            <span>Ваше имя</span>
                         </div>
-                        <div class="contacts__input">
-                            <input required name="email" id="email" type="email">
-                            <label for="email">Ваша Почта</label>
+                        <div id="mail" class="contacts__input">
+                            <input name="email" type="email">
+                            <span>Ваша Почта</span>
                         </div>
                         <div class="contacts__textarea">
-                            <textarea name="text" id="text"></textarea>
-                            <label for="text">Ваше сообщение</label>
+                            <textarea name="text" id="text" maxlength="350"
+                                placeholder="Введите сообщение"></textarea></textarea>
+                            <span>Ваше сообщение</span>
                         </div>
-                        <div class="contacts__triggers">
-                            <button class="contacts__btn btn">Отправить сообщение</button>
+                        <div id="etext" class="contacts__triggers">
+                            <button class="contacts__btn btn button_submit" type="submit">Отправить сообщение</button>
                             <div class="contacts__policy">
-                                <input required type="checkbox">
-                                <span>Я согласен(а) с <a target="_blank" href="/policy.html">политикой
-                                        конфиденциальности</a></span>
+                                <input id="checkbox" name="checkbox" type="checkbox">
+                                <div>Я согласен(а) с <a target="_blank" href="/policy.html">политикой
+                                        конфиденциальности</a></div>
                             </div>
                         </div>
                     </form>
@@ -511,6 +513,10 @@
             </div>
         </div>
     </section>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
